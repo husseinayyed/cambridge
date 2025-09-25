@@ -1,0 +1,22 @@
+:root {
+  font-family: "Quicksand", sans-serif;
+  --bg-main:#111;
+  --text-title:#FFD720
+}
+body {
+  color: white;
+  background-color: var(--bg-main);
+}
+* {
+  box-sizing: border-box;
+}
+.title,.subtitle {
+  margin: 0;
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+.gold {
+  color:var(--text-title)
+}
