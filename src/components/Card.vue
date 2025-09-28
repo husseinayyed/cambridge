@@ -12,7 +12,6 @@ onMounted(() => {
 
     const devSplit = new SplitText("footer h2", { type: "chars" });
     cards.forEach((cardWrapper, index) => {
-      const isLast = index === cards.length - 1;
       gsap.context(() => {
         const nameSplit = new SplitText(".name", { type: "words" });
         const tl1 = gsap.timeline({
