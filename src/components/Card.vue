@@ -65,19 +65,15 @@ onMounted(() => {
           },
           "+=0.3"
         );
-        if(!isLast) {
-          
-          tl1.from(
-            ".line",
-            {
-              duration: 0.4,
-              color: "white",
-              opacity: 0,
-              ease: "power1.inOut",
-            },
-            "-=0.2"
-          );
-        }
+         tl1.from(
+          ".line",
+          {
+            duration: 0.4,
+            opacity: 0,
+            ease: "power1.inOut",
+          },
+          "+=0.3"
+        );
       }, cardWrapper); // Scope to the card wrapper
     });
     gsap.from(devSplit.chars,{
@@ -86,7 +82,7 @@ onMounted(() => {
       duration:0.8,
       stagger:0.05,
       scrollTrigger:{
-        trigger:".special",
+        trigger:"footer h1",
         start:"bottom 90%",
         end:"bottom bottom",
       }
@@ -96,11 +92,10 @@ onMounted(() => {
 </script>
 <template>
   <div class="card-wrapper" v-for="(p, index) in msgs">
-    <div class="card" :style="{border: '1.5px solid '+p.color}" :class="{ special: p.last }">
+    <div class="card">
       <div class="header context">
         <h2
           class="name"
-          :style="{ color: p.color}"
         >
           {{ p.name }}
         </h2>
@@ -111,7 +106,7 @@ onMounted(() => {
         </p>
       </div>
     </div>
-    <div class="line" v-if="!p.last"></div>
+    <div class="line"></div>
   </div>
   <footer>
     <h2 class="footer">Devolped By Hussein Ayed</h2>
@@ -129,6 +124,7 @@ onMounted(() => {
   background-color: #111;
   padding: 0 10px;
   overflow: hidden;
+  border: 1.5px solid #FFD720 ;
   border-radius: 15px;
   position: relative;
 }
