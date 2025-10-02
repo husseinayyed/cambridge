@@ -81,9 +81,10 @@ onMounted(() => {
       duration:0.8,
       stagger:0.05,
       scrollTrigger:{
-        trigger:"footer h1",
+        trigger:"footer h2",
         start:"bottom 90%",
         end:"bottom bottom",
+        toggleActions: "play none none reverse"
       }
     })
   });
@@ -133,6 +134,7 @@ onMounted(() => {
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
+  border-radius: 4px;
   background-color: var(--text-title);
   height: 450px;
 }
