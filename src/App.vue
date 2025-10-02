@@ -72,7 +72,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 0;
   height: 4px;
   border-radius: 4px;
   background-color: #ffd720;
