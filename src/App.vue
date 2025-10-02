@@ -1,7 +1,7 @@
 <script setup>
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import { titles } from "./helpers/data";
 import Card from "./components/Card.vue";
 gsap.registerPlugin(SplitText);
@@ -48,6 +48,9 @@ onMounted(() => {
     );
   });
 });
+onUnmounted(()=>{
+  window.removeEventListener("scroll",handleScroll)
+})
 </script>
 
 <template>
